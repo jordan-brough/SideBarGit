@@ -250,7 +250,7 @@ class SideBarGitBlameCommand(sublime_plugin.WindowCommand):
 		for item in SideBarSelection(paths).getSelectedItems():
 			object = Object()
 			object.item = item
-			object.command = ['git', 'blame', '--no-color', '--', item.forCwdSystemName()]
+			object.command = ['/usr/local/bin/git', 'blame', '--no-color', '--', item.forCwdSystemName()]
 			object.title = 'Blame: '+item.name()
 			object.syntax_file = 'Packages/Git/Git Blame.tmLanguage'
 			object.word_wrap = False
